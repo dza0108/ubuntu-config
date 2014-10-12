@@ -118,3 +118,10 @@ fi
 if [ -f ~/.bashrc_dza ]; then
     . ~/.bashrc_dza
 fi
+
+# set a function call to allow a terminal to configure its own PATH variable
+function setenv
+{
+   export PATH="$PATH:/home/dza/EECE-571/build/Debug+Asserts/bin"
+}
+
