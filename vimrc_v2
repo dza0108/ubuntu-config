@@ -1,0 +1,41 @@
+set number
+
+execute pathogen#infect()
+
+syntax enable
+
+set background=dark
+
+set t_Co=256
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_visibility="high"
+colorscheme solarized
+
+set backspace=indent,eol,start
+set shortmess=a
+set cmdheight=2
+
+let g:rooter_patterns = ['Rakefile', '.git/']
+
+hi Comment ctermfg=252
+set paste
+
+let mapleader="f"
+nmap <leader>s : cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>g : cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>c : cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>d : cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>t : cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>e : cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>f : cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>i : cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+
+let g:tagbar_left=1
+"let g:tagbar_autoclose=1
+let g:tagbar_autofocus=0
+let g:tagbar_sort=0
+let g:tagbar_iconchars = ['+', '-']
+nmap <F8> :TagbarToggle<CR>
+
+set hlsearch
